@@ -1,0 +1,39 @@
+12. How is malloc() function different from calloc()  function?
+Answer:
+This Malloc() is different from Calloc() by following ways;
+
+Malloc:
+-The name malloc stands for memory allocation.
+void *malloc(size_t n) returns a pointer to n bytes of uninitialized storage, or NULL if the request cannot be
+satisfied. If the space assigned by malloc() is overrun, the results are undefined.
+
+-Malloc() takes one argument that is, number of bytes.
+
+-syntax of malloc():
+
+-void *malloc(size_t n);
+ 
+-Allocates n bytes of memory. If the allocation succeeds, a void pointer to the allocated memory is returned.
+ Otherwise NULL is returned.
+
+-Malloc is faster than calloc.
+
+
+
+Calloc:
+The name calloc stands for contiguous allocation.
+void *calloc(size_t n, size_t size)returns a pointer to enough free space for an array of n objects of the specified
+size, or NULL if the request cannot be satisfied. The storage is initialized to zero.
+
+-calloc() take two arguments those are: number of blocks and size of each block.
+
+-syntax of calloc():
+
+-void *calloc(size_t n, size_t size);
+ 
+-Allocates a contiguous block of memory large enough to hold n elements of sizebytes each. The allocated region is
+ initialized to zero.
+
+-Calloc takes little longer than mallocbecause of the extra step of initializing the allocated memory by zero. However,n
+ in practice the difference in speed is very tiny and not recognizable.
+
